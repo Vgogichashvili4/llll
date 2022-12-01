@@ -1,0 +1,13 @@
+.mat-elevation-z8{
+    width: 1700px;
+}
+
+td, th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.mat-sort-header-container {
+    justify-content: center !important;
+}
+

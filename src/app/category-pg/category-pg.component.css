@@ -1,0 +1,97 @@
+body {
+    background: #1111;
+    margin: 0;
+    background-size: cover;
+}
+
+.item {
+    justify-content: space-around;
+    align-content: center;
+    border-image-slice: 1;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+.pos1 {
+    height: 350px;
+    width: 350px;
+    background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaG5vbG9neXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+    background-size: 350px;
+    background-position: center;
+    transition: .5s;
+
+}
+
+.pos2 {
+    height: 350px;
+    width: 350px;
+    background-image: url(https://images.unsplash.com/photo-1628595351029-c2bf17511435?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80);
+    background-size: 350px;
+    background-position: center;
+    transition: .5s;
+}
+
+.pos3 {
+    height: 350px;
+    width: 350px;
+    background-image: url(https://images.unsplash.com/photo-1511818966892-d7d671e672a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+    background-size: 350px;
+    background-position: center;
+    transition: .5s;
+}
+
+.card {
+    margin: 40px;
+    width: 350px;
+    /* background:linear-gradient(150deg,#ffffff,#f1e2b1); */
+    display: grid;
+    justify-content: center;
+    height: 350px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.card>img {
+    width: 350px;
+}
+
+.abv {
+    margin-top: 40%;
+    padding: 30px;
+    font-size: 25px;
+    font-family: nyala;
+    font-weight: bolder;
+    color: #442b41;
+    background: rgba(255, 255, 255, .5);
+
+}
+
+.card>h2 {
+    text-align: center;
+    font-family: Gabriola;
+    color: #442b41;
+    font-size: 30px;
+}
+
+.pos1:hover {
+    background-size: 400px;
+}
+
+.pos2:hover {
+    background-size: 400px;
+}
+
+.pos3:hover {
+    background-size: 400px;
+}
+
+@media(max-width: 720px) {
+    .item {
+        grid-template-columns: auto;
+    }
+}
