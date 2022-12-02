@@ -18,10 +18,10 @@ export class CategoryPgComponent implements OnInit {
     this.router.navigate(['user-status'])
   }
   inf2BtnClick(){
-    this.router.navigate(['medical-students-status'])
+    this.router.navigate(['med-user-status'])
   }
   inf3BtnClick(){
-    this.router.navigate(['architecture-student-status'])
+    this.router.navigate(['architecture-students'])
   }
 
 }

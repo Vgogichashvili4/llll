@@ -1,13 +1,14 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { companymodel } from '../Model/companymodel';
-import { PopupComponent } from '../popup/popup.component';
-import { ApiService } from '../shared/api.service';
-// import * as alertify from 'alertifyjs'
+import { companymodel } from '../../Model/companymodel';
+import { PopupComponent } from '../../popup/popup.component';
+import { ApiService } from '../../shared/api.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import * as _ from 'lodash';
+import { Route, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 
 
@@ -19,15 +20,15 @@ import * as _ from 'lodash';
 })
 export class ActiveUsersPgComponent implements OnInit {
 
-  constructor(private dialog: MatDialog, private api: ApiService) { }
+  constructor(private dialog: MatDialog, private api: ApiService,private router:Router,private toastr: ToastrService,) { }
   @ViewChild(MatPaginator) _paginator!:MatPaginator;
-  // @ViewChild(MatSort) _sort!:MatSort;
   @ViewChild(MatSort) sort!: MatSort; 
   companydata!: companymodel[];
   finaldata:any;
   programmers:any[] = []
   selectedValue!:string 
   apiResponse:any
+  tech:any[] = []
 
 
   ngOnInit(): void {
@@ -56,19 +57,15 @@ export class ActiveUsersPgComponent implements OnInit {
 
   LoadCompany() {
     this.api.Getallcomapny().subscribe(response => {
-      this.apiResponse = response
-      this.companydata = response;
-      // for(let i =0;i<this.companydata.length;i++){
-      //   if(this.companydata[i].isactive == false){
-      //       this.programmers.push(this.companydata[i])
-      //       console.log(this.programmers)
-      //   }
-      // }
-      // console.log(this.finaldata)
-      // this.companydata = this.programmers
+      this.companydata = response
+      for(let i = 0; i < this.companydata.length; i++){
+        if(this.companydata[i].category =="Information Technology"){
+          this.tech.push(this.companydata[i])
+        }
+      }
+      this.companydata == this.tech;
       this.finaldata=new MatTableDataSource<companymodel>(this.companydata);
       this.finaldata.paginator=this._paginator;
-      // this.finaldata.sort=this._sort;
       this.finaldata.sort = this.sort;
 
     });
@@ -78,16 +75,13 @@ export class ActiveUsersPgComponent implements OnInit {
     this.Openpopup(id);
   }
   RemoveCompany(id: any) {
-    // alertify.confirm("Remove Company", "do you want remove this company?", () => {
-    //   this.api.RemoveCompanybycode(id).subscribe(r => {
-    //     this.LoadCompany();
-    //   });
-    // }, function () {
-
-    // })
-
-
+    this.api.RemoveCompanybycode(id).subscribe(r => {
+      this.toastr.success('Deleted successfully');
+        this.LoadCompany();
+      });
   }
+
+
   onChange($event:any){
     let filterData = _.filter(this.apiResponse,(item)=>{
       console.log(item.isactive)
@@ -95,23 +89,10 @@ export class ActiveUsersPgComponent implements OnInit {
     })
     this.finaldata = new MatTableDataSource(filterData);
   }
-  
 
+  onFullInfoBtnClick(){
+    this.router.navigate(['tech-students'])
+  }
+  
 }
 
-
-
-
-
-//  this.allusers =res;
-//       for(let i = 0;i <this.allusers.length;i++){
-//         if(this.allusers[i].isactive == true){
-//           console.log(this.allusers[i])
-//           this.activeUsers.push(this.allusers[i])
-//         }
-//         else{
-//           this.inActiveUsers.push(this.allusers[i])
-//         }
-//       }
-//       console.log(this.activeUsers)
-//       console.log(this.inActiveUsers)

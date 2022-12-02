@@ -10,3 +10,7 @@ td, th {
 .mat-sort-header-container {
     justify-content: center !important;
 }
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}

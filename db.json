@@ -1,94 +1,44 @@
 {
   "company": [
     {
-      "id": 3,
-      "gmail": "nikaotkhozoria@gmail.com",
-      "personalNumber": "5900042343244",
-      "name": "Nika",
-      "lastName": "Otkhozoria",
-      "dateOfBirth": "07.11.2001",
-      "category": "Information technology",
-      "isactive": true
-    },
-    {
-      "id": 4,
-      "gmail": "gmgebrishvili13@gmail.com",
-      "personalNumber": "5345345345",
-      "name": "Giorgi",
-      "lastName": "Mgebrishvili",
-      "dateOfBirth": "12.11.2001",
-      "category": "Information technology",
-      "isactive": true
-    },
-    {
-      "id": 5,
-      "gmail": "zuragagniashvili4@gmail.com",
-      "personalNumber": "g",
-      "name": "hjg",
-      "lastName": "jhk",
-      "dateOfBirth": "j",
-      "category": "rtrett",
-      "isactive": true
-    },
-    {
-      "gmail": "utyityug",
-      "personalNumber": "jh",
-      "name": "gjh",
-      "lastName": "g",
-      "dateOfBirth": "jh",
-      "category": "jwer",
+      "gmail": "hg",
+      "personalNumber": "hj",
+      "name": "gh",
+      "lastName": "j",
+      "dateOfBirth": "g",
+      "category": "Medicine",
       "isactive": true,
-      "id": 6
+      "id": 2
     },
     {
-      "id": 7,
-      "gmail": "sandraRulovs12@gmail.com",
-      "personalNumber": "23423424",
-      "name": "Sandra",
-      "lastName": "Rulovs",
-      "dateOfBirth": "jhg",
-      "category": "jh",
-      "isactive": true
-    },
-    {
-      "gmail": "giorginikoleishvili4@gmail.com",
-      "personalNumber": "65463534534",
-      "name": "giorgi",
-      "lastName": "nikoleishvili",
-      "dateOfBirth": "08.09.2003",
-      "category": "Information technology",
+      "gmail": "hg",
+      "personalNumber": "hj",
+      "name": "gh",
+      "lastName": "j",
+      "dateOfBirth": "g",
+      "category": "Medicine",
       "isactive": true,
-      "id": 9
+      "id": 2
     },
     {
-      "gmail": "NikcRivers44@gmail.com",
-      "personalNumber": "23234244324",
-      "name": "Nick",
-      "lastName": "Rivers",
-      "dateOfBirth": "12.12.2000",
-      "category": "Information technology",
+      "gmail": "nika@gmail.com",
+      "personalNumber": "78978798",
+      "name": "7678",
+      "lastName": "678",
+      "dateOfBirth": "6",
+      "category": "Information Technology",
       "isactive": true,
-      "id": 10
+      "id": 3
     },
     {
       "gmail": "NIkkk44234@gmail.com",
-      "personalNumber": "234234",
-      "name": "jhkjhjk",
-      "lastName": "hjkhjkh",
-      "dateOfBirth": "12312313",
-      "category": "tech",
-      "isactive": true,
-      "id": 11
-    },
-    {
-      "gmail": "dato@gmail.com",
-      "personalNumber": "7897987",
-      "name": "87798",
-      "lastName": "h86",
-      "dateOfBirth": "yh78",
+      "personalNumber": "7897",
+      "name": "987",
+      "lastName": "98",
+      "dateOfBirth": "798",
       "category": "Medicine",
       "isactive": true,
-      "id": 12
+      "id": 4
     }
   ]
 }

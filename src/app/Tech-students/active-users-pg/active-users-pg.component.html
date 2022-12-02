@@ -1,6 +1,8 @@
 <div class="mat-elevation-z8">
-  <div>
+  <div class="buttons">
       <a mat-raised-button color="primary" (click)="Openpopup('')" style="margin: 2%">Create New</a>
+      <a mat-raised-button color="primary" (click)="onFullInfoBtnClick()" style="margin: 2%">View all info</a>
+      
   </div>
   <div class="search-bar">
     <mat-form-field style="margin:0.5%" >
@@ -23,7 +25,6 @@
         </ng-container>
 
         
-
         <ng-container matColumnDef="isactive">
           <th mat-header-cell *matHeaderCellDef> Is Active</th>
           <td mat-cell *matCellDef="let element">{{element.isactive}}</td>

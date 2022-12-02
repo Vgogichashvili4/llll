@@ -9,7 +9,7 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  apiurl = 'https://localhost:8082/'
+  apiurl = 'https://localhost:3000/med'
   private _refreshrequired = new Subject<void>();
   get Refreshrequired() {
     return this._refreshrequired;
@@ -40,6 +40,10 @@ export class ProductService {
         this._refreshrequired.next();
       })
     );
+  }
+
+  CreateComapny(companydata: any) {
+    return this.http.post(this.apiurl, companydata);
   }
 
 
